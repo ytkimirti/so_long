@@ -40,7 +40,7 @@ SRC_COUNT_TOT := $(shell expr $(shell echo -n $(SRC) | wc -w) - $(shell ls -l $(
 ifeq ($(shell test $(SRC_COUNT_TOT) -le 0; echo $$?),0)
 	SRC_COUNT_TOT := $(shell echo -n $(SRC) | wc -w)
 endif
-SRC_COUNT := 1
+SRC_COUNT := 0
 SRC_PCT = $(shell expr 100 \* $(SRC_COUNT) / $(SRC_COUNT_TOT))
 
 all: $(NAME)
